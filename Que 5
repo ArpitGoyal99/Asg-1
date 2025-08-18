@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mat[10][10], r, c;
+    cout << "Enter rows and columns: ";
+    cin >> r >> c;
+
+    cout << "Enter matrix elements:\n";
+    for (int i = 0; i < r; i++)
+        for (int j = 0; j < c; j++)
+            cin >> mat[i][j];
+
+    cout << "Row Sums:\n";
+    for (int i = 0; i < r; i++) {
+        int sum = 0;
+        for (int j = 0; j < c; j++)
+            sum += mat[i][j];
+        cout << "Row " << i + 1 << ": " << sum << endl;
+    }
+
+    cout << "Column Sums:\n";
+    for (int j = 0; j < c; j++) {
+        int sum = 0;
+        for (int i = 0; i < r; i++)
+            sum += mat[i][j];
+        cout << "Column " << j + 1 << ": " << sum << endl;
+    }
+
+    return 0;
+}
